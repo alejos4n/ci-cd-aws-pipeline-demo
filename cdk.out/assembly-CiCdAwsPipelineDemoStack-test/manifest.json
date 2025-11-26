@@ -1,0 +1,71 @@
+{
+  "version": "16.0.0",
+  "artifacts": {
+    "CiCdAwsPipelineDemoStacktestLambdaStack1106B6BF.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "CiCdAwsPipelineDemoStacktestLambdaStack1106B6BF.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "CiCdAwsPipelineDemoStacktestLambdaStack1106B6BF": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://210615636037/us-east-2",
+      "properties": {
+        "templateFile": "CiCdAwsPipelineDemoStacktestLambdaStack1106B6BF.template.json",
+        "validateOnSynth": true,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::210615636037:role/cdk-hnb659fds-deploy-role-210615636037-us-east-2",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::210615636037:role/cdk-hnb659fds-cfn-exec-role-210615636037-us-east-2",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-210615636037-us-east-2/499294f4ff46ec92e21ff7c47ff8fe43e5063857ba53e041064ea80a62dba134.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "CiCdAwsPipelineDemoStacktestLambdaStack1106B6BF.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::210615636037:role/cdk-hnb659fds-lookup-role-210615636037-us-east-2",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        },
+        "stackName": "test-LambdaStack"
+      },
+      "dependencies": [
+        "CiCdAwsPipelineDemoStacktestLambdaStack1106B6BF.assets"
+      ],
+      "metadata": {
+        "/CiCdAwsPipelineDemoStack/test/LambdaStack/LambdaFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaFunctionServiceRoleC555A460"
+          }
+        ],
+        "/CiCdAwsPipelineDemoStack/test/LambdaStack/LambdaFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaFunctionBF21E41F"
+          }
+        ],
+        "/CiCdAwsPipelineDemoStack/test/LambdaStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/CiCdAwsPipelineDemoStack/test/LambdaStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/CiCdAwsPipelineDemoStack/test/LambdaStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "CiCdAwsPipelineDemoStack/test/LambdaStack"
+    }
+  }
+}
